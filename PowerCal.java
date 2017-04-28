@@ -1,7 +1,6 @@
 package guvi;
 
 import java.util.Scanner;
-import java.lang.*;
 
 public class PowerCal {
 	public static void main(String[] args) {
