@@ -1,24 +1,30 @@
-package guvi;
+package programs1;
 
 import java.util.Scanner;
 
 public class PrimeNumber {
 
-	
 	public static void main(String[] args) {
-		Scanner ss=new Scanner(System.in);
-		int n=ss.nextInt();
-			  int i,m=0,flag=0;      
-			  m=n/2;    
-			  for(i=2;i<=m;i++){    
-			   if(n%i==0){    
-			   System.out.println("Number is not prime");    
-			   flag=1;    
-			   break;    
-			   }    
-			  }    
-			  if(flag==0)    
-			  System.out.println("Number is prime");     
+		Scanner ss = new Scanner(System.in);
+		System.out.println("Enter the upper limit");
+		int upplimit = ss.nextInt();
+		System.out.println("Enter the lower limit");
+		int lowlimit = ss.nextInt();
+		ss.close();
+		int count = 0;
+		for(int i=upplimit;i<=lowlimit;i++) {
+			boolean primenumber = true;
+			for(int j=2;j<i;j++) {
+				if(i%j==0) {
+					primenumber = false;
+					break;
+				}
+			}
+			if(primenumber) {
+				count++;
+			}
+		}
+		System.out.println(count+" prime number given range");
 	}
 
 }
