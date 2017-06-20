@@ -1,15 +1,23 @@
-package santhosh;
+package guvi;
 
 import java.util.Scanner;
 
+ class Formatter { 
+	 public static String reverseWord(String str){  
+    String words[]=str.split("\\s");  
+    String reverseWord="";  
+    for(String w:words){  
+        StringBuilder sb=new StringBuilder(w);  
+        sb.reverse();  
+        reverseWord+=sb.toString()+" ";  
+    }  
+    return reverseWord.trim();  
+}  
+}  
 public class StringReverse {
-
 	public static void main(String[] args) {
 		Scanner ss = new Scanner(System.in);
-		System.out.println("Enter the String");
-		String str = ss.next();
-		System.out.println(new StringBuffer(str).reverse().toString());
-		ss.close();
+		String str = ss.nextLine();
+		System.out.println(Formatter.reverseWord(str));
 	}
-
 }
