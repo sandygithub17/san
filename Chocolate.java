@@ -8,10 +8,13 @@ class Cuts {
 	void mohammad(int m, int n) {
 		this.m = m;
 		this.n = n;
-		if(m != 0 || n != 0) {
+		if(m >= 0 && n >= 0) {
 			sum = ((m*n)-1);
+			System.out.println(sum);
 		}
-		System.out.println(sum);
+		else {
+			System.out.println("enter valid row and col");
+		}
 	}
 }
 
