@@ -21,7 +21,6 @@ public class ArraySubSet {
 	public static void main(String[] args) {
 		int[] a1 = {1, 2, 3, 4, 5, 6};
 		int[] a2 = {7, 8, 9, 1, 10};
-		System.out.println();
 		if(a1.length < a2.length) {
 			compareArray(a1, a2);
 		}
