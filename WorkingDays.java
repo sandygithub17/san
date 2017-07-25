@@ -1,17 +1,19 @@
 package guvi;
 
+import java.util.Scanner;
+
 public class WorkingDays {
 
 	public static void main(String[] args) {
-		String[] weekDays = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","sunday"};
-
-		for(int i = 0; i < weekDays.length-2; i++) {
-		System.out.println("Working("+weekDays[i]+")->true");
+		Scanner ss = new Scanner(System.in);
+		String days = ss.next();//enter day like mon tue wed thu fri
+		if((days.equalsIgnoreCase("Mon")) || (days.equalsIgnoreCase("tue")) || (days.equalsIgnoreCase("wed")) || (days.equalsIgnoreCase("Thu")) || (days.equalsIgnoreCase("fri"))) {
+			System.out.println("true");
 		}
-		for(int j = weekDays.length-1; j > 4; j-- ) {
-			System.out.println("Working("+weekDays[j]+")->false");
+		else {
+			System.out.println("false");
 		}
-		
+		ss.close();
 	}
 
 }
